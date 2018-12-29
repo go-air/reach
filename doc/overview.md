@@ -40,6 +40,20 @@ The relation $T(x,x')$ is then defined as
 
 $$T(x,x') \circeq \exists y \ . \ x' = \Phi(x,y)$$
 
+Likewise, the bad states are defined as
+
+$$I(x) \circeq \exists y \ . \ b(x, y)$$
+
+where $b$ is a literal (of type github.com/irifrance/gini/z.Lit) found in a 
+circuit of type \*github.com/irifrance/gini/logic.S.
+
+The initial states in a circuit are defined by 
+
+$$I(x) \circeq \exists y \ . \bigwedge_{m \in M} \mbox{trans.Init}(m)$$
+
+where `trans` is a *logic.S circuit and $M$ denotes the latches whose initial values are 
+either `trans.T` or `trans.F`.
+
 ### Functional representations
 
 While a bit more involved than the relational symbolic representation above, this
