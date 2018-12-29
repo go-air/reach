@@ -50,7 +50,7 @@ by possible inputs to Reach are considered intractable (but atleast
 decidable), more so than the easiest intractable complexity class (NP-complete).
 
 ## Documentation
-The [doc](https://github.com/irifrance/reach/doc) directory contains some high
+The [doc](https://github.com/irifrance/reach/tree/master/doc) directory contains some high
 level documentation.  [Godoc](https://godoc.org/github.com/irifrance/reach) is
 available for library reference.
 
