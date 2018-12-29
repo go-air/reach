@@ -1,6 +1,8 @@
 \documentclass{beamer}
 \usepackage{amsmath}
 \usepackage{listings}
+\usepackage{pgfplots}
+\usepackage{xcolor}
 \usetheme{Boadilla}
 \author{Scott Cotton}
 \title{Reach: Formal Verification in Go}
@@ -162,7 +164,8 @@ with
 	\frametitle{Incremental Induction -- Algorithm}
 	\begin{itemize}
 		\item IC3 and PDR are $2$-phase algorithms.
-		\item Blocking phase: find inductive clauses incrementally.
+		\item Blocking phase: find inductive clauses incrementally from 
+			bad state backward reachable states.
 		\item Propagation phase: identify when clauses become relatively inductive.
 	\end{itemize}
 	\begin{lstlisting}[basicstyle=\small]
@@ -387,15 +390,59 @@ is a clause in $\varphi$, then we know that $\varphi \wedge \neg c$ is unsat.
 	\frametitle{Reach Sneak Peak}
 	\begin{itemize}
 		\item Reach is under development.
+		\item Still some corner case bugs to work out (aiger format).
+		\item Still often not competitive with ABC/PDR.
 		\item Bmc, simulation, result checking stable and fast enough.
-		\item IIC functional and competitive.
-		\item IIC still under active R\&D.
-		\item Still some corner case bugs to work out with non-reduced aigers.
+		\item IIC functional and much faster than baseline IC3.
+		\item Developed with TIP and HWMCC16 benchmarks.
+		\item Lots of easy problems.  Not enough medium difficulty problems.
 	\end{itemize}
 \end{frame}
+
 \begin{frame}
-	\frametitle{Benchmarks}
-	In progress...
+	\frametitle{Justification Benchmarks}
+	\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[enlargelimits=false,xlabel=$+$just,ylabel=$-$just]
+			\addplot+[scatter, only marks, scatter src=explicit]
+			file{just.dat};
+		\end{axis}
+	\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Proof Obligation Filtering Benchmarks}
+	\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[enlargelimits=false,xlabel=$+$filt,ylabel=$-$filt]
+			\addplot+[scatter, only marks, scatter src=explicit]
+			file{filt.dat};
+		\end{axis}
+	\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Consecutive Sifting Benchmarks}
+	\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[enlargelimits=false,xlabel=$+$csift,ylabel=$-$csift]
+			\addplot+[scatter, only marks, scatter src=explicit]
+			file{csift.dat};
+		\end{axis}
+	\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Reach Conclusions}
+	\begin{itemize}
+		\item A new tool and library for symbolic finite state reachability.
+		\item Written in Go.
+		\item Uses Gini extensively. 
+		\item Implements some new effective ideas.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}

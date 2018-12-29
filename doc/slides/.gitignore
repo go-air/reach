@@ -12,7 +12,6 @@
 *.out
 
 # latex
-*.pdf
 *.log
 *.nav
 *.toc
