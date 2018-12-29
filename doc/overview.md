@@ -49,7 +49,7 @@ circuit of type \*github.com/irifrance/gini/logic.S.
 
 The initial states in a circuit are defined by 
 
-$$I(x) \circeq \exists y \ . \bigwedge_{m \in M} trans.Init(m)$$
+$$I(x) \circeq \ . \bigwedge_{m \in M} trans.Init(m)$$
 
 where `trans` is a *logic.S circuit and $M$ denotes the latches whose initial values are 
 either `trans.T` or `trans.F`.
