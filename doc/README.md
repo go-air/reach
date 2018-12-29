@@ -8,7 +8,7 @@ For rendered preview, vs code provides a nice view, as does stackedit.io.
 * [overview](overview.md) contains an overview of 
 the Reachability problem and Reach tool. Latex embedded [1].
 
-* slides/ contains a presentation on Reach focusing on proofs.
+* [slides](slides/present.pdf) contains a presentation on Reach focusing on proofs.
 To build, run 'pdflatex present.tex' on a system with teTex or
 similar.
 
