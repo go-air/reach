@@ -116,6 +116,138 @@ Below we show an example session with some annotations.
 
 #### CLI Usage
 
+##### Overview
+
+```sh
+⎣ ⇨ reach
+Reach is a finite state reachability tool for binary systems.
+
+usage: reach [gopts] <command> [args]
+
+available commands:
+	iic	iic is an incremental inductive checker.
+	bmc	bmc performs SAT based bounded model checking.
+	sim	sim simulates aiger.
+	ck	ck checks traces and inductive invariants.
+	stim	stim outputs an aiger stimulus from an output directory.
+	aag	aag outputs an ascii aiger of the Reach internal aig.
+	aig	aig outputs an binary aiger of the Reach internal aig.
+	info	info provides summary information about an aiger or output.
+
+global options:
+  -cpuprof string
+    	file to output cpu profile
+
+For help on a command, try "reach <cmd> -h".
+```
+
+##### Proving Unreachability
+
+The `iic` command provides the main mechanism for proving 
+unreachability with reach.
+
+```sh
+⎣ ⇨ reach iic -h
+reach iic [options] <aiger0> [<aiger1>, ...]
+  -csift
+    	do consecutive sifting. (default true)
+  -dur duration
+    	timeout. (default 30s)
+  -filter
+    	filter proof obligations. (default true)
+  -justify
+    	justify proof obligations. (default true)
+  -o string
+    	output directory (default ".")
+  -pp
+    	pre-process aig. (default true)
+  -pull
+    	do pulling with consecutive sifting. (default true)
+  -to int
+    	maximum depth. (default 1073741824)
+  -v	run with verbosity.
+
+iic runs an incremental inductive checker on the supplied aiger files to find
+or disprove reachability of bad states. Iic can find and output deep
+counterexample traces and output inductive invariants as a witness to
+unreachable bad states.
+
+iic counterexamples are not necessarily shortest counterexamples. Bad state
+depths for traces are the trace length itself.  For unknown results, depths
+represent the depth to which it is known no counterexample trace exists.
+```
+
+##### BMC
+
+```sh
+reach bmc -h
+reach bmc [opts] <aiger0> <aiger1> ...
+  -dur duration
+    	timeout (default 30s)
+  -o string
+    	output directory (default ".")
+  -to int
+    	maximum depth (default 1073741824)
+
+bmc does SAT based bounded model checking on aiger files.  Bounded model
+checking is the most effective way to find or verify the absense of corner case
+bugs which don't require very many steps of computation.  If no bugs are found,
+then the depth of the result indicates that there are no reachable bad steps
+within "depth" steps.
+```
+
+##### Simulation
+
+```sh
+reach sim -h
+reach sim [opts] <aiger>
+  -dur duration
+    	timeout. (default 30s)
+  -n int
+    	repeat n times until stopping condition. (default 1)
+  -o string
+    	output directory (default ".")
+  -restart int
+    	restart factor for Luby series restarts.
+  -seed int
+    	random seed. (default 44)
+  -to int
+    	stop after reaching the specified depth (if -restart==0). (default 1073741824)
+  -trace
+    	generate traces. (default true)
+  -until int
+    	"-until n" will limit sim so that it runs at most
+    	until all bad states have been reached n times. (default 1)
+  -v	verbosity.
+  -win int
+    	memory for trace gen in steps. (default 1024)
+
+sim simulates an aiger file with the specified trace.  Simulation does 64
+Boolean operations in parallel with a single 64-bit word operation.
+
+Upon completion, any bad states which were visited will cause sim to create
+a trace.  The trace may be incomplete and only contains the last 'win' steps
+leading to the bad state.
+
+Reachable bad states have 'Depth' reported as the true number of steps, which
+may exceed the trace memory limit.
+```
+
+##### Result checking
+Reach can check traces and inductive invariants.
+
+```sh
+⎣ ⇨ reach ck -h
+reach ck [opts] <output0> [<output1>, ...]
+  -dur duration
+    	time limit for checking each invariant. (default 5s)
+  -v	verbose, provide more info.
+
+ck verifies traces and inductive invariants in reach output directories.
+ck prints out whether or each bad state is verified and any errors.  If
+there are any bad states which fail verification, then check causes reach
+to exit with states 1.
+```
 
 ## Notes and References
 
