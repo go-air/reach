@@ -11,8 +11,8 @@
 // set of initial states is defined by the initial values of latches in `S` and
 // the bad states are defined by a literal in `S`.
 //
-//   The root package, reach, is centered around a few data structures to to
-//   aid in coordinating checkers.
+// The root package, reach, is centered around a few data structures to to
+// aid in coordinating checkers.
 //
 //   1. `Output`, which is the output of a checker from analyzing a logic.S and
 //   a, or some, bad states.
