@@ -25,7 +25,7 @@ tracker.
 ## Background
 
 As a software tool, Reach works on transition systems either in
-[gini/logic](https://godoc.org/github.com/irifrance/gini/logic) form (for
+[gini/logic](https://godoc.org/github.com/irifrance/gini/logic#S) form (for
 library use) or in
 [aiger](http://fmv.jku.at/aiger/) format (for cli use) which specify sequential
 synchronous circuits with Boolean/binary state, functions, and I/O.  
