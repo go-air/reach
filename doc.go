@@ -5,13 +5,14 @@
 // tools.
 //
 // All reachability checking in this package and its subpackages uses a
-// sequential circuit in the form of "github.com/irifrance/gini/logic".S to
-// represent a transition relation between state variables. State variables are
-// latches in S. The set of initial states is defined by the initial values of
-// latches in S.
+// sequential circuit in the form of
+// http://godoc.org/github.com/irifrance/gini/logic#S to represent a transition
+// relation between state variables. State variables are latches in `S`. The
+// set of initial states is defined by the initial values of latches in `S` and
+// the bad states are defined by a literal in `S`.
 //
-//   The root package, reach, is centered around a few data structures to to aid
-//   in coordinating checkers.
+//   The root package, reach, is centered around a few data structures to to
+//   aid in coordinating checkers.
 //
 //   1. `Output`, which is the output of a checker from analyzing a logic.S and
 //   a, or some, bad states.
