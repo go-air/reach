@@ -117,9 +117,10 @@
 			P \wedge T & \implies & P'
 		\end{align*}
 		How to find $P$?
-
-		Temporal induction: use the post-image of a BMC prefix.\\
-		Interpolation: use interpolant of a BMC prefix with $\neg B$.
+		\begin{itemize}
+			\item Temporal induction: use the post-image of a BMC prefix.
+			\item Interpolation: use interpolant of a BMC prefix with $\neg B$.
+		\end{itemize}
 		\column{0.5\textwidth}
 		\begin{center}Incremental\end{center}
 		Given $A$, find $P$:
@@ -130,8 +131,10 @@
 		\end{align*}
 		Then update $A \leftarrow A \wedge P$.
 
-		In PDR/IC3, $A$ is CNF, $P$ is a clause which blocks
-		states than can reach $B$, indicated above as $b$.
+		\begin{itemize}
+			\item $A$ is CNF over-approximating reachable states up to some specified depth.
+			\item $P$ is a clause which blocks $b$, where $b$ can reach or is part of $B$.
+		\end{itemize}
 	\end{columns}
 \end{frame}
 
