@@ -263,6 +263,9 @@ to exit with states 1.
 
 ##### Output formatting and Aiger stimuli
 
+Reach can format output/result info in various ways.  One way uses the
+'info' command.  Another way uses the 'stim' command:
+
 ```sh
 ⎣ ⇨ reach info -h
 reach info [opts] <aiger | output>
@@ -287,7 +290,12 @@ By default, the output is written to stdout.
 ⎣ ⇨
 ```
 
-Here is an example which uses both
+The `stim` command is only applicable when the input problem conforms to the aiger
+requirement that all latches have initial state false, since it only ouputs values
+for system input variables ($y$ above).
+
+
+Here is an example which uses both.
 
 ```sh
 ⎣ ⇨ reach bmc ~/tmp/tip/ken.flash\^12.C.aig
@@ -304,6 +312,18 @@ c (aiger) trace for bad[2065]: status=reachable depth=3 dur=0s
 000000000000011110101000000010100000100000
 000000000000000000000000000000000000000000
 .
+```
+
+Likewise, the aigsim tool can be used to cross-check results:
+
+```sh
+⎣ ⇨ reach stim ken.flash\^12.C | aigsim ken.flash\^12.C/aig
+[aigsim] WARNING no properties found, using outputs instead
+00000000000000000000000000000000000000000000 100011110001110000000000000000001011111000 0 10001111000111000000000000000000101111100011
+10001111000111000000000000000000101111100011 010011100100010000110000000000000110100100 0 01001110010001000011000000000000011010010011
+01001110010001000011000000000000011010010011 000000000000011110101000000010100000100000 0 00000000000001111010100000001010000010000011
+00000000000001111010100000001010000010000011 000000000000000000000000000000000000000000 1 00000000000000000000000000000000000000000001
+Trace is a witness for: { b0 }
 ```
 
 ## Notes and References
