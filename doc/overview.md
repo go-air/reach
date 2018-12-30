@@ -126,8 +126,6 @@ that Reach uses its own internal logic representation.  In particular, only the
 `stim` command works with indices guaranteed to correspond to aiger inputs [1].
 We are considering how to improve this situation.
 
-Below we show an example session with some annotations.
-
 #### CLI Usage
 
 ##### Overview
@@ -261,6 +259,51 @@ ck verifies traces and inductive invariants in reach output directories.
 ck prints out whether or each bad state is verified and any errors.  If
 there are any bad states which fail verification, then check causes reach
 to exit with states 1.
+```
+
+##### Output formatting and Aiger stimuli
+
+```sh
+⎣ ⇨ reach info -h
+reach info [opts] <aiger | output>
+  -f string
+    	format for bad state json (eg -f '{{.FormatStatus}}').
+  -v	verbose, provide more info.
+
+info provides information about an aiger or output directory of reach.
+
+⎡ (18-12-30 17:32:29) ───────────────────── (107868|2)⎤
+⎣ ⇨ reach stim -h
+reach stim [opts] <output>
+  -o string
+    	suffix (after bad.) for aiger stimuli output files.
+
+stim output saiger stimuli from an output directory.  The output
+directory should have a .trace file associated with a bad state.
+
+By default, the output is written to stdout.
+
+⎡ (18-12-30 17:32:34) ───────────────────── (107869|2)⎤
+⎣ ⇨
+```
+
+Here is an example which uses both
+
+```sh
+⎣ ⇨ reach bmc ~/tmp/tip/ken.flash\^12.C.aig
+/Users/scott/tmp/tip/ken.flash^12.C.aig: solved 1
+	bad[2065]: status=reachable depth=3 dur=0s
+⎡ (18-12-30 17:29:18) ───────────────────── (107864|0)⎤
+⎣ ⇨ reach info -v -f '{{.FormatStatus}}' ken.flash\^12.C
+ken.flash^12.C/aig reachable
+⎡ (18-12-30 17:29:39) ───────────────────── (107865|0)⎤
+⎣ ⇨ reach stim ken.flash\^12.C
+c (aiger) trace for bad[2065]: status=reachable depth=3 dur=0s
+100011110001110000000000000000001011111000
+010011100100010000110000000000000110100100
+000000000000011110101000000010100000100000
+000000000000000000000000000000000000000000
+.
 ```
 
 ## Notes and References

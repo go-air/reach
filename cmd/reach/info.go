@@ -33,7 +33,7 @@ var infoOpts = struct {
 func initInfo(cmd *subCmd) {
 	flags := cmd.Flags
 	infoOpts.Verbose = flags.Bool("v", false, "verbose, provide more info.")
-	infoOpts.Format = flags.String("f", "", "format for bad state json.")
+	infoOpts.Format = flags.String("f", "", "format for bad state json (eg -f '{{.FormatStatus}}').")
 	flags.Usage = func() {
 		fmt.Println(cmd.Usage)
 		flags.PrintDefaults()

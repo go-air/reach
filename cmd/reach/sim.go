@@ -56,7 +56,7 @@ func initSim(cmd *subCmd) {
 	simOpts.N = flags.Int("n", 1, "repeat n times until stopping condition.")
 	simOpts.MaxWatchCount = flags.Int("until", 1, untilDoc)
 	simOpts.WindowMax = flags.Int("win", 1024, "memory for trace gen in steps.")
-	simOpts.RestartFactor = flags.Int("restart", 0, "restart factor for Luby series restarts.")
+	simOpts.RestartFactor = flags.Int("restart", 0, "restart factor for Luby series restarts (default 0).")
 	simOpts.Seed = flags.Int64("seed", 44, "random seed.")
 	simOpts.Verbose = flags.Bool("v", false, "verbosity.")
 	flags.StringVar(&outDir, "o", ".", "output directory")
