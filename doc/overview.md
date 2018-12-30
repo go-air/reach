@@ -275,7 +275,6 @@ reach info [opts] <aiger | output>
 
 info provides information about an aiger or output directory of reach.
 
-⎡ (18-12-30 17:32:29) ───────────────────── (107868|2)⎤
 ⎣ ⇨ reach stim -h
 reach stim [opts] <output>
   -o string
@@ -286,7 +285,6 @@ directory should have a .trace file associated with a bad state.
 
 By default, the output is written to stdout.
 
-⎡ (18-12-30 17:32:34) ───────────────────── (107869|2)⎤
 ⎣ ⇨
 ```
 
@@ -301,10 +299,8 @@ Here is an example which uses both.
 ⎣ ⇨ reach bmc ~/tmp/tip/ken.flash\^12.C.aig
 /Users/scott/tmp/tip/ken.flash^12.C.aig: solved 1
 	bad[2065]: status=reachable depth=3 dur=0s
-⎡ (18-12-30 17:29:18) ───────────────────── (107864|0)⎤
 ⎣ ⇨ reach info -v -f '{{.FormatStatus}}' ken.flash\^12.C
 ken.flash^12.C/aig reachable
-⎡ (18-12-30 17:29:39) ───────────────────── (107865|0)⎤
 ⎣ ⇨ reach stim ken.flash\^12.C
 c (aiger) trace for bad[2065]: status=reachable depth=3 dur=0s
 100011110001110000000000000000001011111000
