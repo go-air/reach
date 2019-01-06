@@ -85,7 +85,7 @@ We've developed Reach initially with tip and hwmcc benchmarks. Reach can
 solve a lot of these problems quickly and is fairly robust in terms of 
 different kinds of inputs.  Reach also uses some unique technology, making
 it reasonable to try out on inputs for which other methods (smv, abc, etc)
-have problems.  It's proof engine is much faster than baseline IC3, but it
+have problems.  Its proof engine is much faster than baseline IC3, but it
 is still behind ABC/PDR on many problems. 
 
 
