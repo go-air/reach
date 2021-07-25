@@ -18,8 +18,8 @@ This will also get and build our only dependency ([gini](http://github.com/irifr
 apart from Go itself.
 
 Please have a look at our
-[releases](http://github.com/irifrance/reach/releases) for the project
-status.  If you would like to have binary distributions, please let us know by the issue
+[releases](http://github.com/irifrance/reach/releases) for the project status.
+If you would like to have binary distributions, please let us know by the issue
 tracker.
 
 ## Background
