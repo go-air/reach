@@ -3,8 +3,8 @@ package cnf
 import (
 	"fmt"
 
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach/iic/internal/lits"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach/iic/internal/lits"
 )
 
 type Id int

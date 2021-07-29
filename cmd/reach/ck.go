@@ -10,7 +10,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/irifrance/reach"
+	"github.com/go-air/reach"
 )
 
 var ckCmd = &subCmd{

@@ -1,3 +1,5 @@
-module github.com/irifrance/reach
+module github.com/go-air/reach
 
-require github.com/irifrance/gini v0.9.29
+go 1.16
+
+require github.com/go-air/gini v1.0.2

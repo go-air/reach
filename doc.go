@@ -6,7 +6,7 @@
 //
 // All reachability checking in this package and its subpackages uses a
 // sequential circuit in the form of
-// http://godoc.org/github.com/irifrance/gini/logic#S to represent a transition
+// http://godoc.org/github.com/go-air/gini/logic#S to represent a transition
 // relation between state variables. State variables are latches in `S`. The
 // set of initial states is defined by the initial values of latches in `S` and
 // the bad states are defined by a literal in `S`.

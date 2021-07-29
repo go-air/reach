@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini/z"
 )
 
 // Result holds info about bad states.

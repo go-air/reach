@@ -10,8 +10,8 @@ import (
 	"os"
 	"text/template"
 
-	"github.com/irifrance/gini/logic/aiger"
-	"github.com/irifrance/reach"
+	"github.com/go-air/gini/logic/aiger"
+	"github.com/go-air/reach"
 )
 
 var infoCmd = &subCmd{

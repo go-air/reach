@@ -10,8 +10,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/irifrance/reach"
-	"github.com/irifrance/reach/sim"
+	"github.com/go-air/reach"
+	"github.com/go-air/reach/sim"
 )
 
 var simCmd = &subCmd{

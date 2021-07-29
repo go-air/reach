@@ -8,13 +8,13 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/irifrance/gini/inter"
-	"github.com/irifrance/gini/logic"
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini/inter"
+	"github.com/go-air/gini/logic"
+	"github.com/go-air/gini/z"
 )
 
 // Trace holds data for a trace of a sequential circuit as defined by
-// `github.com/irifrance/gini/logic.S`, giving values to the latches, inputs,
+// `github.com/go-air/gini/logic.S`, giving values to the latches, inputs,
 // and an optional list of watched literals.
 type Trace struct {
 	n       int
@@ -140,7 +140,7 @@ func NewTraceBmc(u *logic.Roll, model inter.Model, ws ...z.Lit) (*Trace, []error
 // with corresponding input, latch, and watch literals.  If `s` is such a
 // circuit, then `len(vs) == s.Len()` and `vs` contains truth values for all
 // gates in the circuit indexed by variable, as in
-// `github.com/irifrance/gini/logic.C.Eval`
+// `github.com/go-air/gini/logic.C.Eval`
 func (t *Trace) Append(vs []bool) {
 	sz := len(t.Inputs) + len(t.Latches) + len(t.Watches)
 	if cap(t.values) < len(t.values)+sz {

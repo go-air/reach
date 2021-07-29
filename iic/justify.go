@@ -6,9 +6,9 @@ package iic
 import (
 	"math/rand"
 
-	"github.com/irifrance/gini/inter"
-	"github.com/irifrance/gini/logic"
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini/inter"
+	"github.com/go-air/gini/logic"
+	"github.com/go-air/gini/z"
 )
 
 // does circuit based justifiation minimizing number of latches.  Used as step

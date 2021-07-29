@@ -6,10 +6,10 @@ package iic
 import (
 	"testing"
 
-	"github.com/irifrance/gini"
-	"github.com/irifrance/gini/logic"
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach"
+	"github.com/go-air/gini"
+	"github.com/go-air/gini/logic"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach"
 )
 
 func TestJustifyAndOrInLatch(t *testing.T) {

@@ -8,11 +8,11 @@ import (
 	"sort"
 	"time"
 
-	"github.com/irifrance/gini"
-	"github.com/irifrance/gini/logic"
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach/iic/internal/lits"
-	"github.com/irifrance/reach/iic/internal/queue"
+	"github.com/go-air/gini"
+	"github.com/go-air/gini/logic"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach/iic/internal/lits"
+	"github.com/go-air/reach/iic/internal/queue"
 )
 
 // pre-processor for input aigs

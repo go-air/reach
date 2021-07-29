@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini/z"
 )
 
 // T represents a contiguous store of literals.

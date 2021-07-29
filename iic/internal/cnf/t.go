@@ -5,10 +5,10 @@ import (
 	"io"
 	"sort"
 
-	"github.com/irifrance/gini"
-	"github.com/irifrance/gini/inter"
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach/iic/internal/lits"
+	"github.com/go-air/gini"
+	"github.com/go-air/gini/inter"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach/iic/internal/lits"
 )
 
 const (

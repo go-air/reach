@@ -4,8 +4,8 @@
 package reach
 
 import (
-	"github.com/irifrance/gini/logic"
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini/logic"
+	"github.com/go-air/gini/z"
 )
 
 // Primer takes literals in a logic.S and returns the corresponding literal with

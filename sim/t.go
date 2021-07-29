@@ -8,10 +8,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/irifrance/reach"
+	"github.com/go-air/reach"
 
-	"github.com/irifrance/gini/logic"
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini/logic"
+	"github.com/go-air/gini/z"
 )
 
 // T holds state for a simulator.

@@ -1,7 +1,7 @@
 package lits
 
 import (
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini/z"
 )
 
 func CalcSig(ms []z.Lit) (sig uint64) {

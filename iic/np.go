@@ -5,10 +5,10 @@ import (
 	"io"
 	"math"
 
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach"
-	"github.com/irifrance/reach/iic/internal/cnf"
-	"github.com/irifrance/reach/iic/internal/obs"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach"
+	"github.com/go-air/reach/iic/internal/cnf"
+	"github.com/go-air/reach/iic/internal/obs"
 )
 
 type np struct {

@@ -3,8 +3,8 @@ package sim
 import (
 	"fmt"
 
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach"
 )
 
 // Event gives the context of an event in a simulation.

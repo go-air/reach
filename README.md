@@ -11,21 +11,21 @@ source.  To install Go, please see [the installation webpage](http://golang.org/
 Then all one needs to do is run
 
 ```sh
-go get -u github.com/irifrance/reach...
+go get -u github.com/go-air/reach...
 ```
 
-This will also get and build our only dependency ([gini](http://github.com/irifrance/gini))
+This will also get and build our only dependency ([gini](http://github.com/go-air/gini))
 apart from Go itself.
 
 Please have a look at our
-[releases](http://github.com/irifrance/reach/releases) for the project status.
+[releases](http://github.com/go-air/reach/releases) for the project status.
 If you would like to have binary distributions, please let us know by the issue
 tracker.
 
 ## Background
 
 As a software tool, Reach works on transition systems either in
-[gini/logic](https://godoc.org/github.com/irifrance/gini/logic#S) form (for
+[gini/logic](https://godoc.org/github.com/go-air/gini/logic#S) form (for
 library use) or in
 [aiger](http://fmv.jku.at/aiger/) format (for cli use) which specify sequential
 synchronous circuits with Boolean/binary state, functions, and I/O.  
@@ -50,8 +50,8 @@ by possible inputs to Reach are considered intractable (but atleast
 decidable), more so than the easiest intractable complexity class (NP-complete).
 
 ## Documentation
-The [doc](https://github.com/irifrance/reach/tree/master/doc) directory contains some high
-level documentation.  [Godoc](https://godoc.org/github.com/irifrance/reach) is
+The [doc](https://github.com/go-air/reach/tree/master/doc) directory contains some high
+level documentation.  [Godoc](https://godoc.org/github.com/go-air/reach) is
 available for library reference.
 
 
@@ -97,7 +97,7 @@ BibTeX:
 ```
 @misc{scott_cotton_2019_2554423,
   author       = {Scott  Cotton},
-  title        = {irifrance/reach: Tenu},
+  title        = {go-air/reach: Tenu},
   month        = jan,
   year         = 2019,
   doi          = {10.5281/zenodo.2554423},

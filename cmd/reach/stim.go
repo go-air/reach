@@ -11,7 +11,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/irifrance/reach"
+	"github.com/go-air/reach"
 )
 
 var stimCmd = &subCmd{

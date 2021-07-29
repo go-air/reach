@@ -8,8 +8,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/irifrance/gini/logic/aiger"
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini/logic/aiger"
+	"github.com/go-air/gini/z"
 )
 
 func readAiger(fn string) (*aiger.T, error) {

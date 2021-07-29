@@ -9,14 +9,14 @@ import (
 	"os"
 	"time"
 
-	"github.com/irifrance/reach/iic/internal/lits"
-	"github.com/irifrance/reach/iic/internal/obs"
+	"github.com/go-air/reach/iic/internal/lits"
+	"github.com/go-air/reach/iic/internal/obs"
 
-	"github.com/irifrance/gini"
-	"github.com/irifrance/gini/logic"
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach"
-	"github.com/irifrance/reach/iic/internal/cnf"
+	"github.com/go-air/gini"
+	"github.com/go-air/gini/logic"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach"
+	"github.com/go-air/reach/iic/internal/cnf"
 )
 
 // T contains state for an ic3/pdr model checker.

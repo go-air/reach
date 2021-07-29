@@ -8,8 +8,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/irifrance/gini"
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini"
+	"github.com/go-air/gini/z"
 )
 
 // TBD: add relative calls and mean/stddev online duration.

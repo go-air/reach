@@ -4,8 +4,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach/iic/internal/lits"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach/iic/internal/lits"
 )
 
 func TestT(t *testing.T) {

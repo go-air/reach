@@ -26,7 +26,7 @@ decidable), more so than the easiest intractable complexity class (NP-complete).
 ### Symbolic Representation in Reach
 
 In software terms, the Reach library uses the
-[gini/logic.S](http://godoc.org/github.com/irifrance/gini/logic#S) structure to
+[gini/logic.S](http://godoc.org/github.com/go-air/gini/logic#S) structure to
 represent graphs.  The CLI uses [the aiger format](http://fmv.jku.at/aiger)
 [1].
 
@@ -44,8 +44,8 @@ Likewise, the bad states are defined as
 
 $$B(x) \circeq \exists y \ . \ b(x, y)$$
 
-where $b$ is a literal (of type github.com/irifrance/gini/z.Lit) found in a 
-circuit of type \*github.com/irifrance/gini/logic.S.
+where $b$ is a literal (of type github.com/go-air/gini/z.Lit) found in a 
+circuit of type \*github.com/go-air/gini/logic.S.
 
 The initial states in a circuit are defined by 
 
@@ -110,7 +110,7 @@ Reach is organised into a library and command line tool.
 The Reach library is intended for use when tight integration is desired, for
 customization, tuning, research and experimentation.
 
-The library is [documented](http://godoc.org/github.com/irifrance/reach) on godoc.org.
+The library is [documented](http://godoc.org/github.com/go-air/reach) on godoc.org.
 
 
 ### Reach CLI

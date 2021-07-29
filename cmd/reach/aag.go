@@ -10,9 +10,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/irifrance/gini/logic/aiger"
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach"
+	"github.com/go-air/gini/logic/aiger"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach"
 )
 
 var aagCmd = &subCmd{

@@ -5,9 +5,9 @@ import (
 	"math/rand"
 	"os"
 
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach"
-	"github.com/irifrance/reach/iic/internal/cnf"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach"
+	"github.com/go-air/reach/iic/internal/cnf"
 )
 
 type sifter struct {

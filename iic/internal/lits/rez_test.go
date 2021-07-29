@@ -3,7 +3,7 @@ package lits
 import (
 	"testing"
 
-	"github.com/irifrance/gini/z"
+	"github.com/go-air/gini/z"
 )
 
 func TestResolver(t *testing.T) {

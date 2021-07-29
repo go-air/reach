@@ -3,10 +3,10 @@ package iic
 import (
 	"fmt"
 
-	"github.com/irifrance/gini/logic"
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach"
-	"github.com/irifrance/reach/iic/internal/obs"
+	"github.com/go-air/gini/logic"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach"
+	"github.com/go-air/reach/iic/internal/obs"
 )
 
 type traceGen struct {

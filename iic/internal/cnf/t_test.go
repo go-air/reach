@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/irifrance/gini/z"
-	"github.com/irifrance/reach/iic/internal/lits"
+	"github.com/go-air/gini/z"
+	"github.com/go-air/reach/iic/internal/lits"
 
-	"github.com/irifrance/gini"
-	"github.com/irifrance/reach/iic/internal/cnf"
+	"github.com/go-air/gini"
+	"github.com/go-air/reach/iic/internal/cnf"
 )
 
 func TestT(t *testing.T) {
