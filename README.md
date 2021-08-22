@@ -1,4 +1,4 @@
-# ⊧Reach -- A Finite State Reachability Tool
+# ⊧ Reach -- A Finite State Reachability Tool
 
 Reach is a symbolic finite state reachability checker.  One could also say that
 Reach is a safety model checker.
