@@ -68,7 +68,11 @@ func TestIicCounter(t *testing.T) {
 		carry = trans.And(carry, m)
 	}
 	mc := New(trans, carry)
-	if mc.Try() != 1 {
+	switch mc.Try() {
+	case 1:
+	case 0:
+		t.Logf("iic timed out")
+	case -1:
 		t.Errorf("got ind, expected cex")
 	}
 }
@@ -87,7 +91,11 @@ func TestIicNotCounter(t *testing.T) {
 	}
 	trans.SetNext(ms[N-1], trans.And(trans.Next(ms[N-1]), ms[0].Not()))
 	mc := New(trans, carry)
-	if mc.Try() != -1 {
+	switch mc.Try() {
+	case -1:
+	case 0:
+		t.Logf("timed out...")
+	case 1:
 		t.Errorf("got cex, expected inv")
 	}
 }
@@ -107,7 +115,11 @@ func TestIicFifo(t *testing.T) {
 		all = trans.And(all, m)
 	}
 	mc := New(trans, all)
-	if mc.Try() != 1 {
+	switch mc.Try() {
+	case 1:
+	case 0:
+		t.Logf("timed out.\n")
+	case -1:
 		t.Errorf("got ind, expected cex")
 	}
 }
