@@ -11,7 +11,7 @@ source.  To install Go, please see [the installation webpage](http://golang.org/
 Then all one needs to do is run
 
 ```sh
-go get -u github.com/go-air/reach/...
+go install github.com/go-air/reach/...@latest
 ```
 
 This will also get and build our only dependency ([gini](http://github.com/go-air/gini))
