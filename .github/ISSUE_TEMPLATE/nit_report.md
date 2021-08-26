@@ -1,7 +1,7 @@
 ---
 name: Nit report
 about: Create a nit report to help us improve
-title: ''
+title: '[nit]'
 labels: nit
 assignees: ''
 
