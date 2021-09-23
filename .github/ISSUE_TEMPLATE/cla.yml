@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Agreement to grant copyright of submissions to reach on behalf of:
   - type: input
     id: name
     attributes:
@@ -23,7 +23,7 @@ body:
       placeholder: ex. Deep Code
     validations:
       required: true
-  - type: emails
+  - type: input
     id: emails
     attributes:
       label: Email(s)
